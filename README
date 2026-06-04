@@ -1,0 +1,78 @@
+===============
+shell-toolboxes
+===============
+
+shell-toolboxes: A set of shell 'toolboxes' with useful functions for daily
+tasks in several fields.
+
+ 1. DESCRIPTION
+================
+
+shell-toolboxes is a small set of useful shell 'toolboxes' to provide handy
+functions for daily operations in several contexts.
+
+It's developed and maintained by Agatha Isabelle Moreira and it's likely only
+useful for her. Feel free to contribute any changes to the toolboxes or new
+toolboxes. Beware that changes will only be accepted if they do not modify
+existing behavior according to Agatha's personal needs and preferences, so if
+you feel something should be different I strongly encourage you to fork the
+project.
+
+ 2. INSTALLATION
+=================
+
+To install shell-toolboxes, install the `shell-toolboxes.sh` script in the top
+of the project tree to a location of your preference and source it in your
+bashrc file.
+
+Then create the toolboxes directory:
+$ mkdir -p ~/.shell/toolboxes/
+
+Install the scripts in the `toolboxes/` dir to the created toolboxes directory:
+$ install toolboxes/* ~/.shell/toolboxes/
+
+ 3. USAGE
+==========
+
+To load a toolbox, just run the command:
+$ load_toolboxes LIST OF TOOLBOXES
+
+Where the LIST OF TOOLBOXES is a list of the specific available toolboxes that
+you want to load.
+
+Each toolbox provides its own set of functions and after loading they're
+sourced in your shell and you just call the provided functions.
+
+ 3.1 Available Toolboxes
+~~~~~~~~~~~~~~~~~~~~~~~~~
+The following toolboxes are available from this repository:
+
+TOOLBOX NAME	DESCRIPTION
+assembly	Useful shell functions when working with assembly
+kdev		Useful shell functions to work with linux kernel development
+kconf		Useful shell functions to find kernel config options
+qemu		Useful shell functions to work with qemu and virtiofsd
+
+ 3.2 Extending Toolboxes
+~~~~~~~~~~~~~~~~~~~~~~~~~
+You can easily add your own toolboxes by just creating a shell script file
+written to be sourced making whatever function you want available. You save it
+as `toolbox-name.sh` and then load with load_toolboxes toolbox-name to load it.
+
+ 4. AUTHOR AND LICENSE
+=======================
+
+shell-toolboxes is written by Agatha Isabelle Moreira and licensed under the
+terms of the AGPL 3.0 license. If you fork the project we gently ask you to not
+remove the link to the official original repository:
+
+https://git.sr.ht/~devlavender/shell-toolboxes/
+
+ 5. BUGS
+=========
+
+Software have bugs. Don't expect much support or fixes. My personal
+recommendation is: just use if you feel you can handle fixing possible bugs.
+
+Since it's poorly documented, perhaps a bug is not a bug, just a weirdness
+related to how I use it.
